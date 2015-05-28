@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = 'Google-API-ObjectiveC-Client'
-  s.version      = '3.0.0'
+  s.version      = '3.0.1'
   s.summary      = "Automatically exported from code.google.com/p/google-api-objectivec-client"
 
   s.description  = <<-DESC
