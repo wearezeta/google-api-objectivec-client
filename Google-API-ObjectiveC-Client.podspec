@@ -15,8 +15,8 @@ Pod::Spec.new do |s|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  s.name         = "Google-API-ObjectiveC-Client"
-  s.version      = "3.0.0"
+  s.name         = 'Google-API-ObjectiveC-Client'
+  s.version      = '3.0.0'
   s.summary      = "Automatically exported from code.google.com/p/google-api-objectivec-client"
 
   s.description  = <<-DESC
@@ -68,8 +68,8 @@ Pod::Spec.new do |s|
   # s.platform     = :ios, "5.0"
 
   #  When using multiple platforms
-  s.ios.deployment_target = "3.0"
-  s.osx.deployment_target = "10.5"
+  s.ios.deployment_target = "8.0"
+  # s.osx.deployment_target = "10.6"
 
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -78,7 +78,9 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/wearezeta/google-api-objectivec-client.git", :commit => "ec8b84429dc6e1e9e5f2d17780265c50115bd755" }
+  s.source       = { 
+    :git => 'https://github.com/wearezeta/google-api-objectivec-client.git', 
+    :tag => s.version.to_s }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -89,8 +91,8 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "Source", "Source/**/*.{h,m}", "Source/HTTPFetcher/", "Source/Utilities/",
-  s.exclude_files = "Source/Tests"
+  s.source_files  = "Source/*.{h,m}", "Source/HTTPFetcher/**/*.{h,m}", "Source/Networking/**/*.{h,m}", "Source/OAuth2/**/*.{h,m}", "Source/Objects/**/*.{h,m}", "Source/Utilities/**/*.{h,m}"
+  s.exclude_files = "Source/Tests/**/*.*", "Source/Tools/**/*.*", "Source/HTTPFetcher/Tests/**/*.*", "Source/GTLNetworking_Sources.m", "Source/GTLCommon_Sources.m"
 
   # s.public_header_files = "Classes/**/*.h"
 
@@ -104,7 +106,7 @@ Pod::Spec.new do |s|
   #
 
   # s.resource  = "icon.png"
-  # s.resources = "Resources/*.png"
+  s.resources = "Source/Resources/*"
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
